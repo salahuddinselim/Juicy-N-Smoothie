@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="200" height="100">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35"/>
+      <stop offset="50%" style="stop-color:#FF8A5C"/>
+      <stop offset="100%" style="stop-color:#F7C548"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ADE80"/>
+      <stop offset="100%" style="stop-color:#22C55E"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="40" fill="url(#primaryGrad)" filter="url(#shadow)"/>
+
+  <!-- Cup/Tumbler -->
+  <path d="M35 35 L35 70 Q35 80 50 80 L50 80 Q65 80 65 70 L65 35 Z" fill="#FFFEF9" opacity="0.95"/>
+  <path d="M38 38 L38 65 Q38 72 50 72 Q62 72 62 65 L62 38 Z" fill="#FFE066"/>
+  <ellipse cx="50" cy="38" rx="12" ry="4" fill="#FFFEF9"/>
+
+  <!-- Lime Slice -->
+  <circle cx="65" cy="40" r="8" fill="url(#greenGrad)" opacity="0.9"/>
+  <circle cx="65" cy="40" r="6" fill="#FFFEF9" opacity="0.3"/>
+
+  <!-- Text -->
+  <text x="110" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="800" fill="#1F2937">
+    <tspan fill="url(#primaryGrad)">Juicy</tspan>
+    <tspan> </tspan>
+    <tspan fill="#004E64">n</tspan>
+    <tspan> </tspan>
+    <tspan fill="url(#greenGrad)">Smoothie</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="110" y="70" font-family="Arial, sans-serif" font-size="12" fill="#6B7280" font-weight="500">
+    Fresh Taste • Smooth Experience
+  </text>
+</svg>
